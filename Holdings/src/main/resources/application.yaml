@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: holdings
+server:
+  port: 8088
+  servlet:
+     context-path: /market-updates
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      
+ping-server:
+  ribbon:
+    eureka:
+      enabled: false
+    ServerListRefreshInterval: 1500
